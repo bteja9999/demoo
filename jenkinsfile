@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('code validation') {
             steps {
                 echo 'Building..'
                 sh 'mvn compile'
@@ -15,7 +15,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Deploy') {
+        stage('release') {
             steps {
                 echo 'Deploying....'
             }
